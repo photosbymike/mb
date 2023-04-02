@@ -1,0 +1,181 @@
+body {
+	background-color: #f5f5f5;
+	/*font-family: Arial, sans-serif;*/
+	font-family: 'Playfair Display', serif;
+        
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #009933;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+header img {
+	width: 100%;                      /* 80 / 990 normally, but using 100% in this case */
+	max-width: 1210px;                     /* native size */
+	min-width: 40px;
+/*	float: left;
+/*	margin-left: 2.0202%;                /* 20 / 990 */
+        margin-left: 1.067%;                /* 20 / 990 */
+        padding-bottom: 2em;
+}
+
+h1 {
+	margin: 0;
+	font-size: 36px;
+	font-weight: normal;
+}
+h3{
+   font-size:120%;
+   font-weight:bold;
+}
+nav {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+nav a {
+	color: #333;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+	background-color: #009933;
+	color: #fff;
+}
+
+main {
+	margin: 20px auto;
+	max-width: 1200px;
+}
+.paragraph {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		text-align:center;
+		font-size:140%;
+		color:#6c6d71;
+		padding:1em;
+      }
+.hdr1Color	  {
+color:#fcd116;
+font-size:134%;
+}
+.gallery{
+	display:flex;
+	flex-wrap: wrap;
+	margin: -10px;
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+}
+
+
+
+
+/*
+This code is using the CSS :nth-child() selector to target every third element with a class of .photo, starting with the first one, and applies a different background color to each group of three.
+
+Specifically, the :nth-child(3n+1) selector targets the first element, every fourth element after that (i.e. 1, 4, 7, 10, etc.), and so on. It sets the background-color property to #009933, which is the green color used in the Italian flag.
+
+The :nth-child(3n+2) selector targets the second element, every fourth element after that (i.e. 2, 5, 8, 11, etc.), and so on. It sets the background-color property to #fcd116, which is the yellow color used in the Jamaican flag.
+*/
+.photo:nth-child(2n+1) {
+			background-color: #009933; /* Italian Flag */
+		}
+		.photo:nth-child(2n+2) {
+			background-color: #fcd116; /* Jamaican Flag */
+		}
+/*
+.photo .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center; img{
+		
+}
+*/
+.photo img{
+	display:block;
+	width:100%;
+	height:400px;
+	object-fit:cover;                    
+	max-width: 1210px;                     /* native size */
+	min-width: 40px;
+	transition: transform 0.3s ease-in-out;
+}
+.photo img:hover {
+  transform: scale(1.2);
+}
+}
+.photo:hover .overlay {
+	opacity: 1;
+}
+
+.photo .overlay h2 {
+	font-size: 124%;
+	margin-bottom: 10px;
+}
+
+.photo .overlay p {
+	font-size: 114%;
+	margin: 0;
+}
+@media (max-width: 768px) {
+  .photo {
+    width: calc(50% - 20px);
+  }
+  .photo img{
+	 width: 155%;
+	  display: block;
+  height: 325px;
+  object-fit: cover;
+ margin: 0 auto; /* Center the image horizontally */ 
+  }
+  
+	  .container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 20px;
+	margin: 0 auto; /* Center the image horizontally */ 
+	padding-left:2em;
+}
+  }
+}
+
+@media (max-width: 480px) {
+  .photo {
+    width: 100%;
+	
+  }
+}
