@@ -152,11 +152,12 @@ The :nth-child(3n+2) selector targets the second element, every fourth element a
 	margin: 0;
 }
 @media (max-width: 768px) {
-  .photo {
+ /* .photo {
     width: calc(50% - 20px);
   }
+  */
   .photo img{
-	 width: 155%;
+	 width: 100%;
 	  display: block;
   height: 325px;
   object-fit: cover;
